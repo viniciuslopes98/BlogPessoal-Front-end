@@ -1,13 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Grid } from '@material-ui/core';
 import './App.css';
+import Home from './Paginas/Home/Home';
+import Navbar from './components/estaticos/navbar/Navbar'
+import Footer from './components/estaticos/footer/Footer'
 
 function App() {
   return (
-     <div className="App">
-      <h1 className="c1">Call Of Duty Warzone</h1>
-        <h3>O que é ? Como e onde jogar ? Acompanhe a leitura para entender mais sobre este jogaço! </h3>
-    </div>
+     <>
+       <Navbar />
+        <Home />
+      <Footer />      
+     </>
   );
 }
 
