@@ -1,12 +1,23 @@
+.caixa{
+
+    background-color: #3F51B5;
+}
+
 .titulo{
-    color: #E76F00;
-    text-align: center;
+    color: white !important;
+    font-weight: "bold"
 
 }
-.img{
-    width: 300px;
-    height: 300px;
-    display: block;
-    margin: 0 auto;
+
+.botao{
+
+    border-color: white !important;
+    background-color: #3F51B5;
+    color: white !important;
+}
+
+.postagens{
+
+    background-color: white;
 
 }
