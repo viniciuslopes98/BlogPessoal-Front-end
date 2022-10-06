@@ -65,7 +65,7 @@ function CadastroUsuario() {
 
       <Grid item xs={6} alignItems="center">
         <Box paddingX={10}>
-          <form>
+          <form onSubmit={cadastro}>
             <Typography
               variant="h3"
               gutterBottom
@@ -145,7 +145,7 @@ function CadastroUsuario() {
                 </Button>
               </Link>
               <Button type="submit" variant="contained" color="primary">
-                Cadastrar
+                cadastro
               </Button>
             </Box>
           </form>
