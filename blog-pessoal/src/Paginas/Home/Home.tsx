@@ -1,5 +1,6 @@
 import { Grid, Box, Typography, Button } from "@material-ui/core";
 import React from "react";
+import TabPostagem from "../../components/postagens/tabpostagem/TabPostagem";
 import "./Home.css";
 
 {
@@ -59,6 +60,8 @@ function Home() {
           />
         </Grid>
         <Grid xs={12} className="postagens" ></Grid>
+      <TabPostagem />
+      
       </Grid>
     </>
   );
