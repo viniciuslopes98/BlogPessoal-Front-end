@@ -1,11 +1,11 @@
 .cursor{
-    cursor: pointer;
+    cursor: pointer !important;
     color: white;
     
 }
 
 
 .text-decorater-none{
-    text-decoration: none;
+    text-decoration: none !important;
 
 }
