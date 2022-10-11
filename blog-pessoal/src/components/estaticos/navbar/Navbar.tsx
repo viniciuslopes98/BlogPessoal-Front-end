@@ -11,15 +11,21 @@ import {
 } from "@material-ui/core";
 import { Link, useNavigate } from "react-router-dom";
 import './Navbar.css';
-import { color } from "@mui/system";
-import useLocalStorage from "react-use-localstorage";
+import { useDispatch, useSelector } from "react-redux";
+import { addToken } from "../../../store/tokens/action";
+import { TokenState } from "../../../store/tokens/tokenReducer";
 
 function Navbar() {
-  const[token, setToken]= useLocalStorage('token');
+  
   let navigate = useNavigate();
+  const dispatch = useDispatch();
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+   )
+  
   
   function goLogout(){
-    setToken('')
+    dispatch(addToken(''));
 alert("Usuário deslogado")
 navigate('/login');
   }

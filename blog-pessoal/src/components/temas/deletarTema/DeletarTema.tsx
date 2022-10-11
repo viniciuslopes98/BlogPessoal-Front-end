@@ -6,16 +6,19 @@ import {
   CardActions,
   Button,
 } from "@material-ui/core";
-import { useState, useEffect, ChangeEvent } from "react";
+import { useState, useEffect} from "react";
+import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import useLocalStorage from "react-use-localstorage";
 import Tema from "../../../models/Tema";
 import { buscaId, deleteId, post, put } from "../../../services/Service";
+import { TokenState } from "../../../store/tokens/tokenReducer";
 
 function DeletarTema() {
   let navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
-  const [token, setToken] = useLocalStorage('token');
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+   )
   const [tema, setTema] = useState<Tema>()
 
    useEffect(() => {     

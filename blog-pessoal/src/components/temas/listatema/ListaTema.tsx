@@ -8,16 +8,19 @@ import {
 } from "@material-ui/core";
 
 import { useEffect, useState } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
-import useLocalStorage from "react-use-localstorage";
+import { useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 import Tema from "../../../models/Tema";
 import { busca } from "../../../services/Service";
+import { TokenState } from "../../../store/tokens/tokenReducer";
 
 function ListaTema() {
     let navigate = useNavigate();
     const [temas, setTemas] = useState<Tema[]>([]);
 
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+      (state) => state.tokens
+     )
 
     useEffect(()=>{
         if(token === ''){

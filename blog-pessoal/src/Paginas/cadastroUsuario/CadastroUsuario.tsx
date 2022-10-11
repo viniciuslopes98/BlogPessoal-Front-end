@@ -1,5 +1,5 @@
 import { Box, Button, Grid, TextField, Typography } from "@material-ui/core";
-import React, { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import "./CadastroUsuario.css";
 import { Link, useNavigate } from "react-router-dom";
 import User from "../../models/User";

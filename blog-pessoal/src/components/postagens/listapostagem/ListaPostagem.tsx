@@ -9,7 +9,6 @@ import {
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import useLocalStorage from "react-use-localstorage";
 import Postagem from "../../../models/Postagem";
 import { busca } from "../../../services/Service";
 import { TokenState } from "../../../store/tokens/tokenReducer";
@@ -18,7 +17,8 @@ function ListaPostagem() {
   let navigate = useNavigate();
 
   const [posts, setPosts] = useState<Postagem[]>([]);
- const token = useSelector<TokenState, TokenState["tokens"]>(
+ 
+  const token = useSelector<TokenState, TokenState["tokens"]>(
   (state) => state.tokens
  )
 
